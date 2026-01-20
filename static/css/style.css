@@ -1,0 +1,129 @@
+:root {
+    --primary-color: #7D2AE8; /* Canva-like purple */
+    --secondary-color: #00C4CC; /* Canva-like teal */
+    --text-color: #2D3342;
+    --bg-gradient: linear-gradient(135deg, #f6f9fc 0%, #eef2f7 100%);
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 700;
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Important for padding */
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(125, 42, 232, 0.1);
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(125, 42, 232, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(125, 42, 232, 0.4);
+}
+
+.btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    opacity: 1;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    opacity: 1;
+}
+
+.icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

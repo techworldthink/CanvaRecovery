@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Notice - Canva Recovery</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #444;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid #f0ad4e;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 1.4em;
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .status-update {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+            border-left: 3px solid #eee;
+            padding-left: 15px;
+        }
+
+        .notification-box {
+            padding: 25px;
+            border-radius: 8px;
+            background-color: #fffdf5;
+            border: 1px solid #ffecb3;
+        }
+
+        .notification-box h2 {
+            font-size: 1.1em;
+            margin-top: 0;
+            color: #856404;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        button.submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+
+        button.submit-btn:hover {
+            background-color: #1a252f;
+        }
+
+        button.submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .message {
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+        .message.success {
+            color: #155724;
+        }
+
+        .message.error {
+            color: #721c24;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Technical Maintenance in Progress</h1>
+
+        <p>The website is down right now. Please try to contact the administrator.</p>
+
+        <div class="status-update">
+            It is like a contact form currently. We appreciate your patience as we restore full access.
+        </div>
+
+        <div class="notification-box">
+            <h2>🔔 Stay Updated</h2>
+            <p style="font-size: 0.9em;">If you prefer not to check back manually, enter your email below. We will send
+                you a notification as soon as the service is fully operational.</p>
+
+            <form id="recoveryForm">
+                <div class="form-group">
+                    <input id="email" type="email" class="form-control" placeholder="Email Address" required>
+                </div>
+                <button type="submit" class="submit-btn" id="submitBtn">Notify Me When Restored</button>
+            </form>
+            <div id="messageArea" class="message"></div>
+        </div>
+    </div>
+
+    <!-- Reuse existing JS for form submission -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
